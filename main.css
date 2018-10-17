@@ -3,10 +3,41 @@ body {
     padding: 0;
 }
 
-header {
-    width: 100%;
+#web {
+    grid-row: 1;
+    grid-column: 1;
     display: grid;
-    grid-template-rows: 5fr 1fr;
+    grid-template-rows: 5fr 2fr;
+}
+
+p {
+    margin: 0;
+}
+
+#impr {
+    display: grid;
+    grid-template-rows: 0.5fr 1.5fr 1.5fr 0.5fr;
+    grid-template-columns: 2fr 8fr;
+    margin-bottom: 20px;
+}
+
+#impr :nth-child(1) {
+    grid-row: 2;
+    grid-column: 1;
+    font-size: 0.7em;
+}
+
+#impr :nth-child(2) {
+    grid-row: 3;
+    grid-column: 1;
+    font-size: 0.7em;
+}
+
+#impr :nth-child(3) {
+    grid-row: 2 / span 2;
+    grid-column: 2;
+    font-size: 3em;
+    height: auto;
 }
 
 #bandeau {
@@ -23,13 +54,15 @@ nav {
     justify-content: space-evenly;
     align-items: center;
     grid-row: 2;
-    border-bottom: 3px solid rgba(151, 252, 151, 0.705);
+    background-color: #c9c9c8;
 }
 
 h1 {
     min-width: 215px;
+    margin: 0;
     border-bottom: 3px solid rgb(151, 212, 252);
     border-left: 3px solid rgb(151, 212, 252);
+    height: 30px;
 }
 
 a, a:hover {
@@ -37,15 +70,32 @@ a, a:hover {
     text-decoration: none;
 }
 
+#formation {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+#experiences {
+    grid-row: 3;
+    grid-column: 1;
+}
+
 #formation, #experiences {
     clear: left;
     display: grid;
     grid-template-columns: 1fr repeat(9, 1fr);
-    width: 100%;
+    /* width: 100%; */
 }
 
 #formation>h1, #experiences>h1, #portfolio>h1 {
     grid-column: 2 / span 2;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+#competences h1 {
+    padding-left: 10px;
+    padding-bottom: 5px;
 }
 
 #diplome {
@@ -65,10 +115,11 @@ a, a:hover {
 }
 
 #portfolio {
+    grid-row: 5;
+    grid-column: 1;
     display: grid;
     grid-template-rows: 1fr repeat(2, 1fr);
     grid-template-columns: 1fr repeat(9, 1fr);
-    grid-column: 2 / span 9;
 }
 
 #diplome :first-child {
@@ -145,10 +196,12 @@ a, a:hover {
 }
 
 #competences {
+    grid-row: 4;
+    grid-column: 1;
     margin-left: 10%;
     margin-top: 2%;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1.5fr;
 }
 
 #left {
@@ -160,8 +213,8 @@ a, a:hover {
 #right {
     grid-column: 2;
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr repeat(4, 1fr);
+    grid-template-columns: 0.4fr 1fr 3fr;
+    grid-template-rows: 0.4fr repeat(4, 1fr);
 }
 
 #portfolio p {
@@ -176,18 +229,18 @@ a, a:hover {
 
 #right h1 {
     grid-row: 1;
-    grid-column: 1 / span 2;
+    grid-column: 2 / span 2;
 }
 
 #right p {
-    grid-column: 1;
+    grid-column: 2;
     margin-left: 20%;
 }
 
 #right div {
     margin: auto 0;
-    grid-column: 2;
-    width: 400px;
+    grid-column: 3;
+    width: 300px;
     height: 30px;
     background-color: blue;
     border-radius: 10px;
@@ -195,7 +248,7 @@ a, a:hover {
 
 #right div div {
     grid-column: 2;
-    width: 300px;
+    width: 200px;
     height: 30px;
     background-color: green;
     border-top-right-radius: 0px;
@@ -204,4 +257,47 @@ a, a:hover {
 
 @media print {
     @page {margin: 0;}
+
+    #left>h1 {
+        min-width: 230px;
+    }
+
+    #right {
+        margin-left: 20px;
+        margin-right: 100px;
+    }
+
+    #web {
+        display:none;
+    }
+
+    #impr {
+        display: grid;
+        grid-template-rows: 0.5fr 1.5fr 1.5fr 0.5fr;
+        grid-template-columns: 2.5fr 7fr;
+        margin-bottom: 20px;
+    }
+    
+    #impr :nth-child(1) {
+        grid-row: 2;
+        grid-column: 1;
+        font-size: 0.7em;
+    }
+    
+    #impr :nth-child(2) {
+        grid-row: 3;
+        grid-column: 1;
+        font-size: 0.7em;
+    }
+    
+    #impr :nth-child(3) {
+        grid-row: 2 / span 2;
+        grid-column: 2;
+        font-size: 3em;
+        height: auto;
+    }
+
+    body {
+        margin: 20px;
+    }
 }
