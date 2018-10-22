@@ -6,27 +6,18 @@
     <title>Page Title</title>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <link rel="stylesheet" type="text/css" href="main.css" />
-    <!-- <script src="main.js"></script> -->
+    <script src="main.js"></script>
 </head>
 <body>
-    <header id="web">
-        <div id="bandeau">
-            <img src="headercv.png" alt="">
-        </div>
-        <nav>
-            <a href="#formation">Formation</a>
-            <a href="#experiences">Expériences</a>
-            <a href="#competences">Compétences</a>
-            <a href="#portfolio">Porfolio</a>
-        </nav>
-    </header>
-    <header id="impr">
-        <p>Mail : luca.rosso30@gmail.com</p>
-        <p>Permis B, véhicule personnel</p>
-        <h1>ROSSO Luca</h1>
-    </header>
+    <nav>
+        <a class="formation">Formation</a>
+        <a class="experiences">Expériences</a>
+        <a class="competences">Compétences</a>
+        <a class="portfolio">Porfolio</a>
+    </nav>
     <section id="formation">
-        <h1>Formation :</h1>
+        <?php include_once ("formation.php")?>
+        <!-- <h1>Formation :</h1>
         <article id="diplome">
             <div>
             <p>2018 : </p><p>Formation développeur web/web mobile en cours, ERN CODA by Simplon, Alès</p>
@@ -40,9 +31,9 @@
             <div>
             <p>2007 : </p><p>Baccalauréat Scientifique option Anglais européen</p>
             </div>
-        </article>
+        </article> -->
     </section>
-    <section id="experiences">
+    <!-- <section id="experiences">
         <h1>Expériences :</h1>
         <article id="expPro">
             <div>
@@ -65,16 +56,16 @@
         </article>
         <article id="right">
             <h1>Langages de programmation :</h1>
-            <p>HTML5</p><div><div class="barre1bis"></div></div>
-            <p>CSS3</p><div><div class="barre2bis"></div></div>
-            <p>Javascript</p><div><div class="barre3bis"></div></div>
-            <p>PHP</p><div><div class="barre4bis"></div></div>
-            <p>MySQL</p><div><div class="barre5bis"></div></div>
+            <p>HTML5</p><img src="" alt="">
+            <p>CSS3</p><img src="" alt="">
+            <p>Javascript</p><img src="" alt="">
+            <p>PHP</p><img src="" alt="">
+            <p>MySQL</p><img src="" alt="">
         </article>
     </section>
     <section id="portfolio">
         <h1>Portfolio :</h1>
         <p>À venir...</p>
-    </section>
+    </section> -->
 </body>
 </html>
